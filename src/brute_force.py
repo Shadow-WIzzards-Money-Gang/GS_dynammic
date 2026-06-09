@@ -23,6 +23,7 @@ class ResultadoForcaBruta:
     """Encapsula todos os resultados de uma execução da Força Bruta."""
 
     def __init__(self) -> None:
+        """Inicializa o resultado com contadores zerados e custo ótimo em infinito."""
         self.melhor_caminho: List[int] = []
         self.melhor_custo: float = math.inf
         self.todos_caminhos: List[Tuple[List[int], float]] = []   # (caminho, custo)
@@ -30,6 +31,13 @@ class ResultadoForcaBruta:
         self.num_caminhos_avaliados: int = 0
 
     def registrar_caminho(self, caminho: List[int], custo: float) -> None:
+        """
+        Registra um caminho encontrado e atualiza o melhor se for mais barato.
+
+        Args:
+            caminho: Sequência de ids de vértices do caminho.
+            custo:   Custo total acumulado do caminho.
+        """
         self.num_caminhos_avaliados += 1
         self.todos_caminhos.append((list(caminho), custo))
         if custo < self.melhor_custo:

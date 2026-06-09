@@ -156,6 +156,20 @@ def _posicoes_bst(no: Optional[Node],
                   dx: float = 4.0,
                   pos: Optional[Dict] = None,
                   edges: Optional[List] = None) -> Tuple[Dict, List]:
+    """
+    Calcula recursivamente as posições (x, y) de cada nó para desenho da BST.
+
+    Args:
+        no:    Nó raiz da subárvore atual.
+        x:     Coordenada horizontal do nó atual.
+        y:     Coordenada vertical do nó atual.
+        dx:    Deslocamento horizontal aplicado a cada nível.
+        pos:   Dicionário acumulador {id_vertice: (x, y)}.
+        edges: Lista acumuladora de arestas [(id_pai, id_filho)].
+
+    Returns:
+        Tupla (pos, edges) preenchidas com os dados da subárvore.
+    """
     if pos is None:
         pos = {}
     if edges is None:
@@ -247,6 +261,7 @@ def plotar_bst(bst: BinarySearchTree,
 
 
 def _buscar_risco_por_id(no: Optional[Node], vid: int) -> Optional[float]:
+    """Busca o índice de risco de um nó pelo id do vértice (percurso completo)."""
     if no is None:
         return None
     if vertice_id(no.vertice) == vid:
@@ -256,6 +271,7 @@ def _buscar_risco_por_id(no: Optional[Node], vid: int) -> Optional[float]:
 
 
 def _buscar_nome_por_id(no: Optional[Node], vid: int) -> str:
+    """Busca o nome do município de um nó pelo id do vértice (percurso completo)."""
     if no is None:
         return ""
     if vertice_id(no.vertice) == vid:

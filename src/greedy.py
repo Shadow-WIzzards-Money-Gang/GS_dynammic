@@ -31,6 +31,12 @@ class ResultadoGuloso:
     """Encapsula resultado e métricas de um algoritmo guloso."""
 
     def __init__(self, algoritmo: str) -> None:
+        """
+        Inicializa o resultado com o nome do algoritmo e contadores zerados.
+
+        Args:
+            algoritmo: Nome do algoritmo que gerou o resultado (ex.: "Dijkstra").
+        """
         self.algoritmo = algoritmo
         self.custo_total: float = 0.0
         self.caminho: List[int] = []                          # para Dijkstra

@@ -28,11 +28,25 @@ def criar_vertice(id_municipio: int, nome: str, indice_risco: float,
     return (id_municipio, nome, float(indice_risco), float(custo_atendimento), int(populacao))
 
 
-def vertice_id(v: Vertice) -> int:          return v[0]
-def vertice_nome(v: Vertice) -> str:        return v[1]
-def vertice_risco(v: Vertice) -> float:     return v[2]
-def vertice_custo(v: Vertice) -> float:     return v[3]
-def vertice_populacao(v: Vertice) -> int:   return v[4]
+def vertice_id(v: Vertice) -> int:
+    """Retorna o id do município."""
+    return v[0]
+
+def vertice_nome(v: Vertice) -> str:
+    """Retorna o nome do município."""
+    return v[1]
+
+def vertice_risco(v: Vertice) -> float:
+    """Retorna o índice de risco ambiental (0.0–1.0)."""
+    return v[2]
+
+def vertice_custo(v: Vertice) -> float:
+    """Retorna o custo de atendimento em horas."""
+    return v[3]
+
+def vertice_populacao(v: Vertice) -> int:
+    """Retorna a população do município."""
+    return v[4]
 
 
 # ---------------------------------------------------------------------------
@@ -85,18 +99,23 @@ class Grafo:
         return self._adj.get(u, [])
 
     def get_vertice(self, vid: int) -> Optional[Vertice]:
+        """Retorna o vértice com o id informado, ou None se não existir."""
         return self._vertices.get(vid)
 
     def vertices(self) -> List[Vertice]:
+        """Retorna lista com todos os vértices do grafo."""
         return list(self._vertices.values())
 
     def ids_vertices(self) -> List[int]:
+        """Retorna lista com os ids de todos os vértices."""
         return list(self._vertices.keys())
 
     def num_vertices(self) -> int:
+        """Retorna o número de vértices no grafo."""
         return len(self._vertices)
 
     def num_arestas(self) -> int:
+        """Retorna o número de arestas não-direcionadas no grafo."""
         return sum(len(adj) for adj in self._adj.values()) // 2
 
     # ------------------------------------------------------------------
@@ -138,6 +157,7 @@ class Grafo:
     # ------------------------------------------------------------------
 
     def to_dict(self) -> dict:
+        """Serializa o grafo para um dicionário compatível com json.dump."""
         return {
             "vertices": [list(v) for v in self._vertices.values()],
             "adj": {str(k): val for k, val in self._adj.items()}
@@ -201,6 +221,7 @@ class BinarySearchTree:
     """
 
     def __init__(self) -> None:
+        """Inicializa a BST vazia."""
         self._raiz: Optional[Node] = None
         self._tamanho: int = 0
 
@@ -343,9 +364,11 @@ class BinarySearchTree:
     # ------------------------------------------------------------------
 
     def __len__(self) -> int:
+        """Retorna o número de nós na árvore."""
         return self._tamanho
 
     def __iter__(self) -> Iterator[Vertice]:
+        """Itera sobre os vértices em ordem crescente de risco."""
         return iter(self.percurso_in_order())
 
     @classmethod

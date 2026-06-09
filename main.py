@@ -31,6 +31,7 @@ LINHA = "=" * 65
 
 
 def secao(titulo: str) -> None:
+    """Imprime um cabeçalho de seção formatado no terminal."""
     print(f"\n{LINHA}")
     print(f"  {titulo}")
     print(LINHA)
@@ -41,6 +42,12 @@ def secao(titulo: str) -> None:
 # ---------------------------------------------------------------------------
 
 def executar_cenario_a() -> None:
+    """
+    Executa o Cenário A: roteamento de socorro às enchentes no Rio Grande do Sul.
+
+    Carrega o grafo de municípios do RS, constrói a BST de risco, executa
+    Dijkstra a partir de Porto Alegre e gera as figuras 1 e 2.
+    """
     secao("CENÁRIO A — Rede de Resposta a Enchentes (RS)")
 
     g_rs = Grafo.from_json("data/raw/municipios_rs.json")
@@ -138,6 +145,12 @@ def executar_cenario_a() -> None:
 # ---------------------------------------------------------------------------
 
 def executar_cenario_b() -> None:
+    """
+    Executa o Cenário B: triagem de municípios em seca no MATOPIBA.
+
+    Carrega o grafo da região MATOPIBA, ordena municípios por risco via BST,
+    calcula a MST com Kruskal e executa Dijkstra a partir do hub em Balsas.
+    """
     secao("CENÁRIO B — Triagem de Seca no MATOPIBA")
 
     g_mt = Grafo.from_json("data/raw/municipios_matopiba.json")
@@ -173,6 +186,12 @@ def executar_cenario_b() -> None:
 # ---------------------------------------------------------------------------
 
 def executar_benchmarks() -> None:
+    """
+    Executa os benchmarks comparativos entre Força Bruta e Dijkstra.
+
+    Mede tempo e memória para N = 5..100, calcula o gap de otimalidade
+    e salva as figuras 3–6 em output_figs/.
+    """
     secao("BENCHMARKS — Análise de Desempenho e Escalabilidade")
 
     monitor = PerformanceMonitor()

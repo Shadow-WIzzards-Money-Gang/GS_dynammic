@@ -29,6 +29,18 @@ from src.greedy import dijkstra, ResultadoGuloso
 
 @dataclass
 class Medicao:
+    """
+    Resultado de uma única execução de benchmark.
+
+    Attributes:
+        algoritmo:     Nome do algoritmo medido.
+        n_vertices:    Tamanho da instância (número de vértices).
+        tempo_ms:      Tempo de execução em milissegundos.
+        memoria_mb:    Memória de pico alocada em megabytes.
+        num_operacoes: Operações elementares contabilizadas pelo algoritmo.
+        custo_solucao: Custo da solução encontrada (ex.: soma de distâncias).
+        extra:         Dados adicionais livres para extensões futuras.
+    """
     algoritmo: str
     n_vertices: int
     tempo_ms: float
@@ -118,6 +130,7 @@ class PerformanceMonitor:
     """
 
     def __init__(self) -> None:
+        """Inicializa o monitor com lista de medições vazia."""
         self.medicoes: List[Medicao] = []
 
     def benchmark_dijkstra(self, n_list: List[int],
