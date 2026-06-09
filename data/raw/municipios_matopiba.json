@@ -1,0 +1,33 @@
+{
+  "cenario": "Triagem de risco de seca no MATOPIBA",
+  "fonte": "Dados sinteticos baseados em NDVI MODIS/NASA + INMET",
+  "vertices": [
+    {"id": 2101400, "nome": "Balsas",                  "indice_risco": 0.88, "custo_atendimento": 1200.0, "populacao": 88000},
+    {"id": 2911857, "nome": "Luis Eduardo Magalhaes",  "indice_risco": 0.92, "custo_atendimento": 980.0,  "populacao": 60000},
+    {"id": 2903276, "nome": "Barreiras",               "indice_risco": 0.86, "custo_atendimento": 1050.0, "populacao": 137000},
+    {"id": 2907731, "nome": "Formosa do Rio Preto",    "indice_risco": 0.94, "custo_atendimento": 870.0,  "populacao": 28000},
+    {"id": 1721000, "nome": "Palmas",                  "indice_risco": 0.45, "custo_atendimento": 1500.0, "populacao": 308000},
+    {"id": 1702109, "nome": "Araguaina",               "indice_risco": 0.67, "custo_atendimento": 1100.0, "populacao": 185000},
+    {"id": 2208007, "nome": "Picos",                   "indice_risco": 0.79, "custo_atendimento": 820.0,  "populacao": 77000},
+    {"id": 2211209, "nome": "Uruçui",                  "indice_risco": 0.83, "custo_atendimento": 760.0,  "populacao": 22000},
+    {"id": 2105500, "nome": "Imperatriz",              "indice_risco": 0.62, "custo_atendimento": 1300.0, "populacao": 247000},
+    {"id": 2111300, "nome": "Timon",                   "indice_risco": 0.74, "custo_atendimento": 890.0,  "populacao": 162000}
+  ],
+  "arestas": [
+    {"u": 2101400, "v": 2911857, "peso": 2.8},
+    {"u": 2101400, "v": 2105500, "peso": 3.5},
+    {"u": 2101400, "v": 2208007, "peso": 4.1},
+    {"u": 2911857, "v": 2903276, "peso": 1.2},
+    {"u": 2911857, "v": 2907731, "peso": 1.8},
+    {"u": 2903276, "v": 2907731, "peso": 2.2},
+    {"u": 2903276, "v": 1721000, "peso": 5.5},
+    {"u": 2907731, "v": 2208007, "peso": 3.9},
+    {"u": 1721000, "v": 1702109, "peso": 2.1},
+    {"u": 1702109, "v": 2105500, "peso": 2.8},
+    {"u": 2208007, "v": 2211209, "peso": 1.5},
+    {"u": 2208007, "v": 2111300, "peso": 3.2},
+    {"u": 2211209, "v": 2101400, "peso": 3.1},
+    {"u": 2105500, "v": 1702109, "peso": 2.6},
+    {"u": 2111300, "v": 2101400, "peso": 3.8}
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "cenario": "Enchentes Rio Grande do Sul 2024",
+  "fonte": "Dados sinteticos baseados em DNIT + Defesa Civil RS",
+  "vertices": [
+    {"id": 4314902, "nome": "Porto Alegre",      "indice_risco": 0.72, "custo_atendimento": 1850.0, "populacao": 1400000},
+    {"id": 4304606, "nome": "Canoas",             "indice_risco": 0.88, "custo_atendimento": 950.0,  "populacao": 345000},
+    {"id": 4318705, "nome": "Sao Leopoldo",       "indice_risco": 0.91, "custo_atendimento": 780.0,  "populacao": 229000},
+    {"id": 4313409, "nome": "Novo Hamburgo",      "indice_risco": 0.85, "custo_atendimento": 820.0,  "populacao": 240000},
+    {"id": 4311403, "nome": "Lajeado",            "indice_risco": 0.95, "custo_atendimento": 620.0,  "populacao": 80000},
+    {"id": 4312401, "nome": "Montenegro",         "indice_risco": 0.78, "custo_atendimento": 540.0,  "populacao": 59000},
+    {"id": 4300877, "nome": "Alvorada",           "indice_risco": 0.82, "custo_atendimento": 430.0,  "populacao": 201000},
+    {"id": 4320008, "nome": "Sapucaia do Sul",    "indice_risco": 0.79, "custo_atendimento": 410.0,  "populacao": 130000},
+    {"id": 4309407, "nome": "Gravataí",           "indice_risco": 0.76, "custo_atendimento": 560.0,  "populacao": 265000},
+    {"id": 4322400, "nome": "Viamao",             "indice_risco": 0.68, "custo_atendimento": 490.0,  "populacao": 255000},
+    {"id": 4316907, "nome": "Santa Maria",        "indice_risco": 0.61, "custo_atendimento": 980.0,  "populacao": 276000},
+    {"id": 4314132, "nome": "Passo Fundo",        "indice_risco": 0.55, "custo_atendimento": 1100.0, "populacao": 205000},
+    {"id": 4314407, "nome": "Pelotas",            "indice_risco": 0.73, "custo_atendimento": 1050.0, "populacao": 328000},
+    {"id": 4315602, "nome": "Rio Grande",         "indice_risco": 0.66, "custo_atendimento": 980.0,  "populacao": 201000},
+    {"id": 4305108, "nome": "Caxias do Sul",      "indice_risco": 0.58, "custo_atendimento": 1200.0, "populacao": 516000}
+  ],
+  "arestas": [
+    {"u": 4314902, "v": 4304606, "peso": 0.5},
+    {"u": 4314902, "v": 4300877, "peso": 0.4},
+    {"u": 4314902, "v": 4309407, "peso": 0.8},
+    {"u": 4314902, "v": 4322400, "peso": 0.9},
+    {"u": 4314902, "v": 4314407, "peso": 3.2},
+    {"u": 4304606, "v": 4318705, "peso": 0.5},
+    {"u": 4304606, "v": 4320008, "peso": 0.3},
+    {"u": 4318705, "v": 4313409, "peso": 0.6},
+    {"u": 4318705, "v": 4311403, "peso": 1.2},
+    {"u": 4313409, "v": 4311403, "peso": 1.0},
+    {"u": 4311403, "v": 4312401, "peso": 0.7},
+    {"u": 4311403, "v": 4316907, "peso": 2.5},
+    {"u": 4312401, "v": 4309407, "peso": 1.1},
+    {"u": 4309407, "v": 4305108, "peso": 1.8},
+    {"u": 4316907, "v": 4314132, "peso": 2.2},
+    {"u": 4316907, "v": 4314407, "peso": 2.8},
+    {"u": 4314407, "v": 4315602, "peso": 1.5},
+    {"u": 4314132, "v": 4305108, "peso": 3.1},
+    {"u": 4320008, "v": 4318705, "peso": 0.4},
+    {"u": 4300877, "v": 4322400, "peso": 0.6}
+  ]
+}
