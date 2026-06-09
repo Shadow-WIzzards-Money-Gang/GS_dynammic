@@ -35,7 +35,7 @@ class ResultadoGuloso:
         Inicializa o resultado com o nome do algoritmo e contadores zerados.
 
         Args:
-            algoritmo: Nome do algoritmo que gerou o resultado (ex.: "Dijkstra").
+            Algoritmo: Nome do algoritmo que gerou o resultado (ex.: "Dijkstra").
         """
         self.algoritmo = algoritmo
         self.custo_total: float = 0.0
